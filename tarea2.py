@@ -171,4 +171,4 @@ elif int(opcion_1) == 7:
 elif int(opcion_1) == 8:
     gen_ocho()
 else:
-    print('Opción incorrecta.')
+    print('Opción Incorrecta.')
