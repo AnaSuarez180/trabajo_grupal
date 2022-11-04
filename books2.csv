@@ -1,0 +1,21 @@
+id,isbn,autores,titulo,genero,editorial
+1,439023483,Suzanne Collins,The Hunger Games,fantasy,Scholastic
+2,439554934,"J.K. Rowling, Mary GrandPré",Harry Potter and the Philosopher's Stone,fantasy,Bloomsbury
+3,316015849,Stephenie Meyer,Twilight,romance,"Little, Brown and Company"
+4,61120081,Harper Lee,To Kill a Mockingbird,fiction,J. B. Lippincott & Co.
+5,743273567,F. Scott Fitzgerald,The Great Gatsby,realism,Charles Scribner's Sons
+6,525478817,John Green,The Fault in Our Stars,romance,Penguin Books
+7,618260307,J.R.R. Tolkien,The Hobbit or There and Back Again,fantasy,Mariner Books
+8,316769177,J.D. Salinger,The Catcher in the Rye,realism,"Little, Brown"
+9,1416524797,Dan Brown,Angels & Demons,fantasy,Simon & Schuster
+10,679783261,Jane Austen,Pride and Prejudice,romance,"T. Egerton, Whitehall"
+11,1594480001,Khaled Hosseini,The Kite Runner,drama,Riverhead Books
+12,62024035,Veronica Roth,Divergent,romance,Katherine Tegen Books
+13,451524934,"George Orwell, Erich Fromm, Celâl Üster",Nineteen Eighty-Four,fiction,Secker & Warburg
+14,452284244,George Orwell,Animal Farm: A Fairy Story,fable,"Harcourt, Brace and Company"
+15,553296981,"Anne Frank, Eleanor Roosevelt, B.M. Mooyaart-Doubleday",Het Achterhuis: Dagboekbrieven 14 juni 1942 - 1 augustus 1944,biography,Prometheus
+16,307269752,"Stieg Larsson, Reg Keeland",Män som hatar kvinnor,drama,Manpocket
+17,439023491,Suzanne Collins,Catching Fire,romance,Scholastic
+18,043965548X,"J.K. Rowling, Mary GrandPré, Rufus Beck",Harry Potter and the Prisoner of Azkaban,fantasy,Bloomsbury
+19,618346252,J.R.R. Tolkien,The Fellowship of the Ring,fantasy,George Allen & Unwin
+20,439023513,Suzanne Collins,Mockingjay,romance,Scholastic
