@@ -11,28 +11,29 @@ def habitat(habitat_name):
     #lista de pokemones en habitat
     
     lista_pokemones = [pokemones['name']for pokemones in data['pokemon_species']]
+      
+    for i in range(len(lista_pokemones)):
+        print("pokemon: {}".format(lista_pokemones[i]))
     
-    print(f"Pokemones en este habitat: {lista_pokemones}")
-    
-opcion_2 = input('Ingresa el número del Habitat a listar: ')
-if str(opcion_2) == "cave":
+opcion_4 = input('Ingresa el número del Habitat a listar: ')
+if str(opcion_4) == "cave":
     habitat("cave")
-if str(opcion_2) == "forest":
+elif str(opcion_4) == "forest":
     habitat("forest")
-if str(opcion_2) == "grassland":
+elif str(opcion_4) == "grassland":
     habitat("grassland")
-if str(opcion_2) == "mountain":
+elif str(opcion_4) == "mountain":
     habitat("mountain")
-if str(opcion_2) == "rare":
+elif str(opcion_4) == "rare":
     habitat("rare")
-if str(opcion_2) == "rough-terrain":
+elif str(opcion_4) == "rough-terrain":
     habitat("rough-terrain")
-if str(opcion_2) == "sea":
+elif str(opcion_4) == "sea":
     habitat("sea")
-if str(opcion_2) == "urban":
+elif str(opcion_4) == "urban":
     habitat("urban")
-if str(opcion_2) == "waters-edge":
+elif str(opcion_4) == "waters-edge":
     habitat("waters-edge")
-
 else:
     print('Habitat Incorrecto, elige otro por favor.')
+    
