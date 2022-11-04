@@ -24,63 +24,31 @@ Opción 10: Guardar libros en archivo de disco duro (.txt o csv).
 Nota: listar libros involucra: título, género, ISBN, editorial y autor(es)"""
 
 import csv
-
-#csv
-
-#     data = list(csv.reader(open(input('Escriba la dirección del archivo a leer: '))))
-#     #C:\Users\sofia\Desktop\SILABUZ CLASES\SEMANA 2\TRABAJO GRUPAL\books.csv
-#     for row in data:
-#         print(row) 
-
-class Libro:
-    def __init__(self, id, titulo, genero, isbn, editorial, autores, **kwargs) -> None:
-        self.__dict__.update(**kwargs)
-        self.id = id
-        self.titulo = titulo
-        self.genero = genero
-        self.isbn = isbn
-        self.editorial = editorial
-        self.autores = autores
-    
-    def listar_libros(self):
-        print(self.id)
-        print(self.titulo)
-        print(self.genero)
-        print(self.isbn)
-        print(self.editorial)
-        print(self.autores)
+import pandas as pd
+import json
 
 
-# data = list(csv.reader(open(input('Escriba la dirección del archivo a leer: '))))
-    #C:\Users\sofia\Desktop\SILABUZ CLASES\SEMANA 2\TRABAJO GRUPAL\books.csv
-# print(data)
-# for list in data:
-#     data.append(book_list)
-
-book_list =[]
-with open(r'C:\Users\sofia\Desktop\SILABUZ CLASES\SEMANA 2\TRABAJO GRUPAL\books.csv', 'r') as data:
-    #Puede ser solo books.csv o la ruta en la que tengas el archivo
-    csv_dict_reader = csv.reader(data)
-    for row in csv_dict_reader:
-        book_list.append(row)
-
-#Listar libros
-book_list.pop(0)
-print(book_list)
-
-#Pensé que se necesitarían otras funciones dentro de la clase, pero ya no estoy segura
-#Se pueden descartar
-
-def agregar_libros(self):
-        pass
-
-def eliminar_libro(self):
-        pass
+#data = list(csv.reader(open(input('Escriba la dirección del archivo a leer: '))))
 
 
 
-#libro = Libro(data)
-#libro.listar_libro .... o algo así?
 
-# libro = Libro(book_list)
-# libro.listar_libros()
+
+#data = list(csv.reader(open(input('Escriba la dirección del archivo a leer: '))))
+
+
+data = pd.read_csv(r'C:\Users\sofia\Desktop\SILABUZ CLASES\SEMANA 2\TRABAJO GRUPAL\books2.csv')
+
+def listar_libros():
+    for head in data:
+        print(data)
+
+listar_libros()
+
+
+
+
+
+
+
+
