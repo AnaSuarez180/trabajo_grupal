@@ -23,64 +23,70 @@ y autores).
 Opción 10: Guardar libros en archivo de disco duro (.txt o csv).
 Nota: listar libros involucra: título, género, ISBN, editorial y autor(es)"""
 
+
+import pandas as pd
+from csv import writer
 import csv
 
-#csv
+#data = list(csv.reader(open(input('Escriba la dirección del archivo a leer: '))))
 
-#     data = list(csv.reader(open(input('Escriba la dirección del archivo a leer: '))))
-#     #C:\Users\sofia\Desktop\SILABUZ CLASES\SEMANA 2\TRABAJO GRUPAL\books.csv
-#     for row in data:
-#         print(row) 
+data = pd.read_csv('books2.csv', sep=";") #index_col=0,
 
-class Libro:
-    def __init__(self, id, titulo, genero, isbn, editorial, autores, **kwargs) -> None:
-        self.__dict__.update(**kwargs)
-        self.id = id
-        self.titulo = titulo
-        self.genero = genero
-        self.isbn = isbn
-        self.editorial = editorial
-        self.autores = autores
+def listar_libros():
+    print(data)
+
+# listar_libros()
+
+#AGREGAR LIBRO
+
+# datos = [input('Id: '), input('Título: '), input('Género: '), input('ISBN: '), input('Editorial: '), input('Autores: ')]
+def append_list_as_row(file_name, raw_content):
     
-    def listar_libros(self):
-        print(self.id)
-        print(self.titulo)
-        print(self.genero)
-        print(self.isbn)
-        print(self.editorial)
-        print(self.autores)
+    with open(file_name,'a+',newline='') as write_obj:
+        cvs_writer = writer(write_obj)
+        cvs_writer.writerow(raw_content)
+        print('¡Listo! Revisa en la ruta que indica la terminal.')
+
+# append_list_as_row('books2.csv', datos)
 
 
-# data = list(csv.reader(open(input('Escriba la dirección del archivo a leer: '))))
-    #C:\Users\sofia\Desktop\SILABUZ CLASES\SEMANA 2\TRABAJO GRUPAL\books.csv
-# print(data)
-# for list in data:
-#     data.append(book_list)
+def eliminar_libro(file_name):
+    eliminado = input('Ingresa el libro a eliminar: ')
+    with open(file_name, 'r+') as r, open('output.csv', 'w') as f:
+        reader = csv.reader(r)
+        writer = csv.writer(f)
+        for row in reader:
+            if eliminado in row:
+                print(f'{row} será eliminada')
+            else:
+                writer.writerow(row)
 
-book_list =[]
-with open(r'C:\Users\sofia\Desktop\SILABUZ CLASES\SEMANA 2\TRABAJO GRUPAL\books.csv', 'r') as data:
-    #Puede ser solo books.csv o la ruta en la que tengas el archivo
-    csv_dict_reader = csv.reader(data)
-    for row in csv_dict_reader:
-        book_list.append(row)
-
-#Listar libros
-book_list.pop(0)
-print(book_list)
-
-#Pensé que se necesitarían otras funciones dentro de la clase, pero ya no estoy segura
-#Se pueden descartar
-
-def agregar_libros(self):
-        pass
-
-def eliminar_libro(self):
-        pass
+# eliminar_libro('books2.csv')
 
 
+def buscar_libro():
+    df = pd.DataFrame(data)
+    eleccion = input('Título o ISBN: ')
+    if eleccion.lower() == 'título':
+        libro = input('Ingresa el libro: ')
+        df = df[df.apply(lambda r: r.str.contains(libro, na=False).any(), axis=1)]
+        print(df)
+    elif eleccion.lower() == 'isbn':
+        isbn = input('Ingresa el ISBN: ')
+        df = df[df.apply(lambda r: r.str.contains(isbn, na=False).any(), axis=1)]
+        print(df)
+    else:
+        print('Opción incorrecta.')
 
-#libro = Libro(data)
-#libro.listar_libro .... o algo así?
+# buscar_libro()
 
-# libro = Libro(book_list)
-# libro.listar_libros()
+#ORDERNAR LIBROS POR TÍTULO
+def ordenar_libros():
+    csvData = pd.read_csv('books2.csv')
+    csvData.sort_values(csvData.columns[1], axis=0, inplace=True)
+    print(csvData)
+
+ordenar_libros() #El primero es Angels and Demons, el último es Twilight
+
+
+
