@@ -1,10 +1,10 @@
-url_api = "https://pokeapi.co/api/v2/pokemon-habitat/"
+url_api_4 = "https://pokeapi.co/api/v2/pokemon-habitat/"
 
 import requests
 
 
 def habitat(habitat_name):
-    response = requests.get(url_api+ habitat_name)
+    response = requests.get(url_api_4+ habitat_name)
     
     data = response.json()
     
