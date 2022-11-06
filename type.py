@@ -8,7 +8,7 @@ def type_0(type_name):
     
     data = response.json()
     
-    #lista de pokemones en habitat
+    #lista de tipo de pokemones
     
     type_pokemones = [tipo['pokemon']['name']for tipo in data['pokemon']]
 

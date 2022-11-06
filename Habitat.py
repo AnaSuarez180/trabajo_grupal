@@ -1,10 +1,10 @@
-url_api = "https://pokeapi.co/api/v2/pokemon-habitat/"
+url_api_4 = "https://pokeapi.co/api/v2/pokemon-habitat/"
 
 import requests
 
 
 def habitat(habitat_name):
-    response = requests.get(url_api+ habitat_name)
+    response = requests.get(url_api_4+ habitat_name)
     
     data = response.json()
     
@@ -15,7 +15,7 @@ def habitat(habitat_name):
     for i in range(len(lista_pokemones)):
         print("pokemon: {}".format(lista_pokemones[i]))
     
-opcion_4 = input('Ingresa el número del Habitat a listar: ')
+opcion_4 = input('Ingresa el nombre del Habitat a listar: ')
 if str(opcion_4) == "cave":
     habitat("cave")
 elif str(opcion_4) == "forest":
