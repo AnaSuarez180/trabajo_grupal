@@ -15,7 +15,7 @@ def habitat(habitat_name):
     for i in range(len(lista_pokemones)):
         print("pokemon: {}".format(lista_pokemones[i]))
     
-opcion_4 = input('Ingresa el número del Habitat a listar: ')
+opcion_4 = input('Ingresa el nombre del Habitat a listar: ')
 if str(opcion_4) == "cave":
     habitat("cave")
 elif str(opcion_4) == "forest":

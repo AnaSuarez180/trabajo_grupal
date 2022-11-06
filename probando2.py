@@ -1,21 +1,37 @@
 nombre=str(input("Pokemaniatico ingresa tu nombre para empezar: "))
 
-
-print("****PokeMenu Interactivo*****")
-print("    Bienvenido "+nombre)
-
+print("""
+    _.----.        ____         ,'  _\   ___    ___     ____
+_,-'       `.     |    |  /`.   \,-'    |   \  /   |   |    \  |`.      
+\      __    \    '-.  | /   `.  ___    |    \/    |   '-.   \ |  |
+ \.    \ \   |  __  |  |/    ,','_  `.  |          | __  |    \|  |
+   \    \/   /,' _`.|      ,' / / / /   |          ,' _`.|     |  |
+    \     ,-'/  /   \    ,'   | \/ / ,`.|         /  /   \  |     |
+     \    \ |   \_/  |   `-.  \    `'  /|  |    ||   \_/  | |\    |
+      \    \ \      /       `-.`.___,-' |  |\  /| \      /  | |   |
+       \    \ `.__,'|  |`-._    `|      |__| \/ |  `.__,'|  | |   |
+        \_.-'       |__|    `-._ |              '-.|     '-.| |   |
+                                `'                            '-._|
+      """)
+print("                 ☆☆☆☆☆☆☆☆☆PokeMenu Interactivo☆☆☆☆☆☆☆☆☆")
+print("                             Bienvenido "+nombre+"!!")
 while True:
-    
     print("""
-    Elige una opción para listar Pokemones!!!
-      
-    1) Generación
-    2) Forma
-    3) Habilidad
-    4) Habitat
-    5) Tipo
+        ░█▀▀▄░░░░░░░░░░░▄▀▀█        
+        ░█░░░▀▄░▄▄▄▄▄░▄▀░░░█
+        ░░▀▄░░░▀░░░░░▀░░░▄▀         Elije una opción para listar Pokemones!!!
+        ░░░░▌░▄▄░░░▄▄░▐▀▀
+        ░░░▐░░█▄░░░▄█░░▌▄▄▀▀▀▀█         1) Generación
+        ░░░▌▄▄▀▀░▄░▀▀▄▄▐░░░░░░█
+        ▄▀▀▐▀▀░▄▄▄▄▄░▀▀▌▄▄▄░░░█         2) Forma
+        █░░░▀▄░█░░░█░▄▀░░░░█▀▀▀
+        ░▀▄░░▀░░▀▀▀░░▀░░░▄█▀            3) Habilidad
+        ░░░█░░░░░░░░░░░▄▀▄░▀▄
+        ░░░█░░░░░░░░░▄▀█░░█░░█          4) Habitat
+        ░░░█░░░░░░░░░░░█▄█░░▄▀
+        ░░░█░░░░░░░░░░░████▀            5) Tipo
+        ░░░▀▄▄▀▀▄▄▀▀▄▄▄█▀                                                          
     """)
-
     opc = input("Para continuar ingresa una opcion: ")
     
     if opc =="1":
@@ -528,7 +544,7 @@ while True:
             for i in range(len(lista_pokemones)):
                 print("pokemon: {}".format(lista_pokemones[i]))
     
-        opcion_4 = input('Ingresa el número del Habitat a listar: ')
+        opcion_4 = input('Ingresa el nombre del Habitat a listar: ')
         if str(opcion_4) == "cave":
             habitat("cave")
         elif str(opcion_4) == "forest":
